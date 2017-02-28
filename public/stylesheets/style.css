@@ -9,9 +9,9 @@
   flex-direction: column;
   height: 315px;
   width: 232px;
-  border: solid 1px #8e8e8e;
+  // border: solid 1px #8e8e8e;
   border-radius: 8px 3%;
-  box-shadow: 8px 10px 30px 12px #ababab;
+  box-shadow: 5px 15px 50px 11px #ababab;
 }
 
 .calc-display-window {
@@ -21,14 +21,13 @@
 }
 
 .calc-display-num {
-  height: 77%;
+  height: 76%;
   font-family: 'Roboto', sans-serif;
   font-size: 1.25em;
-  background-color: #e0e0e0;
 }
 
 .calc-row {
-  height: 19%;
+  height: 20%;
   width: 100%;
   display: inline-flex;
   flex-direction: row;
@@ -36,7 +35,7 @@
 }
 
 .calc-row-bottom {
-  height: 19%;
+  height: 20%;
   width: 100%;
   display: inline-flex;
   flex-direction: row;
@@ -45,21 +44,34 @@
 .calc-button {
   align-self: center;
   text-align: center;
-  width: 50px;
+  line-height: 50px;
+  width: 25%;
+  height: 100%;
+  border-right: solid 1px #8e8e8e;
+  background-color: #e0e0e0;
 }
 
 .calc-button-clear {
-  width: 50px;
+  width: 25%;
   align-self: center;
   text-align: center;
+  border-right: solid 1px #8e8e8e;
+  line-height: 48px;
+  background-color: #e0e0e0;
 }
 
 .calc-button-divide, .calc-button-multiply, .calc-button-add,
 .calc-button-equals, .calc-button-decimal, .calc-button-pos,
 .calc-button-minus, .calc-button-percent {
-  width: 50px;
+  width: 25%;
   align-self: center;
   text-align: center;
+  line-height: 48px;
+}
+
+.calc-button-pos, .calc-button-percent, .calc-button-decimal {
+  border-right: solid 1px #8e8e8e;
+  background-color: #e0e0e0;
 }
 
 .calc-button-divide, .calc-button-multiply, .calc-button-add,
@@ -70,5 +82,8 @@
 .calc-button-zero {
   align-self: center;
   text-align: center;
-  width: 100px;
+  width: 50%;
+  line-height: 48px;
+  border-right: solid 1px #8e8e8e;
+  background-color: #e0e0e0;
 }
