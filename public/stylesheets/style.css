@@ -9,7 +9,6 @@
   flex-direction: column;
   height: 315px;
   width: 232px;
-  // border: solid 1px #8e8e8e;
   border-radius: 8px 3%;
   box-shadow: 5px 15px 50px 11px #ababab;
 }
@@ -26,22 +25,28 @@
   font-size: 1.25em;
 }
 
-.calc-row {
+.calc-row, .calc-row-bottom {
   height: 20%;
   width: 100%;
   display: inline-flex;
   flex-direction: row;
+}
+
+.calc-row {
   border-bottom: solid 1px #8e8e8e;
 }
 
-.calc-row-bottom {
-  height: 20%;
-  width: 100%;
-  display: inline-flex;
-  flex-direction: row;
+.calc-button:hover, .calc-button-divide:hover, .calc-button-multiply:hover,
+.calc-button-add:hover, .calc-button-equals:hover, .calc-button-decimal:hover,
+.calc-button-pos:hover, .calc-button-minus:hover, .calc-button-percent:hover,
+.calc-button-clear:hover, .calc-button-zero:hover {
+  transition: filter .4s ease;
+  filter: brightness(70%)
 }
 
-.calc-button {
+.calc-button, .calc-button-clear, .calc-button-divide, .calc-button-multiply,
+.calc-button-add, .calc-button-equals, .calc-button-decimal, .calc-button-pos,
+.calc-button-minus, .calc-button-percent, .calc-button-zero {
   align-self: center;
   text-align: center;
   line-height: 50px;
@@ -51,27 +56,10 @@
   background-color: #e0e0e0;
 }
 
-.calc-button-clear {
-  width: 25%;
-  align-self: center;
-  text-align: center;
-  border-right: solid 1px #8e8e8e;
-  line-height: 48px;
-  background-color: #e0e0e0;
-}
-
 .calc-button-divide, .calc-button-multiply, .calc-button-add,
 .calc-button-equals, .calc-button-decimal, .calc-button-pos,
-.calc-button-minus, .calc-button-percent {
-  width: 25%;
-  align-self: center;
-  text-align: center;
+.calc-button-minus, .calc-button-percent, .calc-button-zero {
   line-height: 48px;
-}
-
-.calc-button-pos, .calc-button-percent, .calc-button-decimal {
-  border-right: solid 1px #8e8e8e;
-  background-color: #e0e0e0;
 }
 
 .calc-button-divide, .calc-button-multiply, .calc-button-add,
@@ -80,10 +68,5 @@
 }
 
 .calc-button-zero {
-  align-self: center;
-  text-align: center;
   width: 50%;
-  line-height: 48px;
-  border-right: solid 1px #8e8e8e;
-  background-color: #e0e0e0;
 }
