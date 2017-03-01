@@ -1,3 +1,11 @@
+.black {
+  background: black;
+}
+
+.red {
+  background: red;
+}
+
 .browser-calc-container {
   display: flex;
   justify-content: center;
@@ -15,8 +23,9 @@
 
 .calc-display-window {
   height: 24%;
+  color: #fff;
   background-color: #999999;
-  opacity: .7;
+  // opacity: .7;
 }
 
 .calc-display-num {

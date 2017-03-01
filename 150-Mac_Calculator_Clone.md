@@ -99,7 +99,7 @@ In stage 1 you will only be using `HTML` and `CSS` to build a clone of the OS X 
 - [x] Each button has a CSS transition to slightly darken the background color on hover over 100ms
 - [x] Each button has a CSS transition to slightly darken the background color on click over 100ms
 - [x] All class names re: the calculator are name-spaced under `.calculator-…`
-- [] Your stylesheet contains little to no duplicate style declarations
+- [x] Your stylesheet contains little to no duplicate style declarations
 
 ### Stage 2
 
