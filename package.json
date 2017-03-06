@@ -1,0 +1,24 @@
+{
+  "name": "build-a-calculator",
+  "version": "1.0.0",
+  "description": "Build a Calculator from scratch",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/asantos3026/build-a-calculator.git"
+  },
+  "keywords": [
+    "vanilla",
+    "javascript",
+    "calculator"
+  ],
+  "author": "Aileen Santos",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/asantos3026/build-a-calculator/issues"
+  },
+  "homepage": "https://github.com/asantos3026/build-a-calculator#readme"
+}
