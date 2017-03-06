@@ -7,10 +7,13 @@ document.addEventListener("DOMContentLoaded", function() {
 })
 
 function Calculator() {
+  this.firstNums = '';
   this.decimalCheck = false;
-  this.firstNums = ''
-  this.secondNums = ''
-  // this.operator = ''
+  this.total = null;
+  this.operator = null;
+  this.operand = null;
+  this.saveOperation = false;
+  this.overwrite = false;
 }
 
 Calculator.prototype.displayNums = function(innerText) {
@@ -45,9 +48,9 @@ Calculator.prototype.buttonPressed = function(event) {
     case '+/-':
       this.posNeg();
       break;
-    // case '+':
-    //   this.addNums();
-    //   break;
+    case '+':
+      this.handleOperator(event.target.innerText)
+      break;
   }
 }
 
@@ -78,6 +81,50 @@ Calculator.prototype.clearDisplay = function() {
 Calculator.prototype.posNeg = function() {
   this.firstNums *= -1;
   this.updateDisplay()
+}
+
+Calculator.prototype.pickOperation = function(num1, num2, oper) {
+  let operations = {
+    '+': function(num1,num2) { return num1 + num2 },
+    '-': function(num1,num2) { return num1 - num2 },
+    '*': function(num1,num2) { return num1 * num2 },
+    '/': function(num1,num2) { return num1 / num2 }
+  }
+  return operations[op](num1, num2)
+}
+
+Calculator.prototype.enableOverwrite = function(){
+  this.overwrite = true
+  this.decimalCheck = false
+}
+
+Calculator.prototype.resolveEquation = function(){
+  if (this.saveOperation && !this.overwrite ){
+    this.operand = this.firstNums
+    this.saveOperation = false
+  }
+  if( this.total !== null ){
+    this.total = this.pickOperation(parseFloat(this.total), parseFloat(this.operand) || null, this.operator)
+    this.firstNums = this.total
+  }
+  this.enableOverwrite()
+  this.updateDisplay()
+}
+
+Calculator.prototype.handleOperator = function(op){
+    this.operator = op
+    if (!this.overwrite){
+      this.saveOperation = true
+      this.resolveEquation()
+    }
+    this.total = this.firstNums
+    this.operand = this.firstNums
+    this.enableOverwrite()
+    this.saveOperation = true
+}
+
+Calculator.prototype.equals = function(){
+  this.resolveEquation()
 }
 
 // Calculator.prototype.addNums = function() {
